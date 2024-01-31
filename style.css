@@ -1,21 +1,355 @@
 body {
 
-    
+    font-family: Lato;
+    background-color :azure;
 
 }
 
 @media screen and (max-width : 768px) {
 
+    #NewGame {
+
+        font-size: 1.1em;
+        width : 40%;
+        margin-left : 30%;
+        margin-top : 3%;
+        display : flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        
+        
+
+    }
+
+    #GameContainer {
+
+        font-size: 1.1em;
+        display : flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width : 100%;
+        height : 80%;
+        margin-top : 5%;
+
+
+    }
+
+    #PlayerOne {
+
+        margin-top : -15%;
+        font-size : 1.3em;
+        width : 30%;
+        height : 80%;
+        display : flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    #PlayerTwo {
+
+        margin-top : -15%;
+        font-size : 1.3em;
+        width : 30%;
+        height : 80%;
+        display : flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    
+
+    #Command {
+
+        
+        width : 30%;
+        height : 80%;
+        display : flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align : center;
+
+    }
+
+    #Dice {
+
+        padding-top : 25%;
+    }
+
+    #Dice img {
+
+        width : 50%;
+        height : auto;
+
+    }
+
+    #RollDice {
+        
+        margin-top : 25%;
+        width : 25%;
+        margin-left : 38%;
+        display : flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        
+    }
+    #RollDice img {
+
+        height : auto;
+
+    }
+
+    #Hold {
+        
+        text-align: left;
+        width : 25%;
+        margin-left : 38%;
+        display : flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    #Hold img {
+
+        height : auto;
+
+    }
 
 }
 
 
 @media screen and (min-width : 769px) and (max-width : 1024px) {
 
+    #NewGame {
+
+        font-size: 1.3em;
+        width : 30%;
+        margin-left : 35%;
+        margin-top : 3%;
+        display : flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        
+        
+
+    }
+
+    #GameContainer {
+
+        font-size: 1.3em;
+        display : flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width : 100%;
+        height : 80%;
+        margin-top : 5%;
+
+
+    }
+
+    #PlayerOne {
+
+        margin-top : -15%;
+        font-size : 1.5em;
+        width : 30%;
+        height : 80%;
+        display : flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    #PlayerTwo {
+
+        margin-top : -15%;
+        font-size : 1.5em;
+        width : 30%;
+        height : 80%;
+        display : flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    
+
+    #Command {
+
+        
+        width : 30%;
+        height : 80%;
+        display : flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align : center;
+
+    }
+
+    #Dice {
+
+        padding-top : 25%;
+    }
+
+    #Dice img {
+
+        width : 50%;
+        height : auto;
+
+    }
+
+    #RollDice {
+        
+        margin-top : 25%;
+        width : 25%;
+        margin-left : 38%;
+        display : flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        
+    }
+    #RollDice img {
+
+        height : auto;
+
+    }
+
+    #Hold {
+        
+        text-align: left;
+        width : 25%;
+        margin-left : 38%;
+        display : flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    #Hold img {
+
+        height : auto;
+
+    }
 
 }
 
 @media screen and (min-width : 1025px) {
 
+    #NewGame {
+
+        font-size: 1.5em;
+        width : 10%;
+        margin-left : 45%;
+        margin-top : 3%;
+        display : flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        
+        
+
+    }
+
+    #GameContainer {
+
+        font-size: 1.5em;
+        display : flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width : 100%;
+        height : 80%;
+        margin-top : 5%;
+
+
+    }
+
+    #PlayerOne {
+
+        font-size : 2em;
+        width : 30%;
+        height : 80%;
+        display : flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    #PlayerTwo {
+
+        font-size : 2em;
+        width : 30%;
+        height : 80%;
+        display : flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    
+
+    #Command {
+
+        
+        width : 30%;
+        height : 80%;
+        display : flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align : center;
+
+    }
+
+    #Dice {
+
+        padding-top : 25%;
+    }
+
+    #RollDice {
+        
+        margin-top : 25%;
+        width : 25%;
+        margin-left : 38%;
+        display : flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        
+    }
+    #RollDice img {
+
+        height : auto;
+
+    }
+
+    #Hold {
+        
+        text-align: left;
+        width : 25%;
+        margin-left : 38%;
+        display : flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    #Hold img {
+
+        height : auto;
+
+    }
 
 }
