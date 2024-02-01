@@ -23,6 +23,22 @@ body {
 
     }
 
+    #Winner {
+
+        font-size: 1.2em;
+        width : 40%;
+        margin-left : 30%;
+        margin-top : 3%;
+        display : flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        
+        
+
+    }
+
     #GameContainer {
 
         font-size: 1.1em;
@@ -128,6 +144,22 @@ body {
 @media screen and (min-width : 769px) and (max-width : 1024px) {
 
     #NewGame {
+
+        font-size: 1.3em;
+        width : 30%;
+        margin-left : 35%;
+        margin-top : 3%;
+        display : flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        
+        
+
+    }
+
+    #Winner {
 
         font-size: 1.3em;
         width : 30%;
@@ -262,6 +294,21 @@ body {
 
     }
 
+    #Winner {
+
+        font-size: 1.5em;
+        width : 10%;
+        margin-left : 45%;
+        display : flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        
+        
+
+    }
+
     #GameContainer {
 
         font-size: 1.5em;
@@ -300,7 +347,27 @@ body {
 
     }
 
-    
+    #P1Turn img {
+        display : none;
+    }
+
+    #P2Turn img {
+        display : none;
+    }
+    #P1Current {
+
+        width : 30%;
+        text-align: center;
+        background-color: red;
+    }
+
+
+    #P2Current {
+
+        width : 30%;
+        text-align: center;
+        background-color: red;
+    }
 
     #Command {
 
