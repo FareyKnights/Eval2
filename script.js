@@ -7,6 +7,9 @@ let randomResult = 0;
 let p1Name = "";
 let p2Name = "";
 let gameStatus = "notReady";
+let imgDice = ["Dice1","Dice2","Dice3","Dice4","Dice5","Dice6"];
+let rollImg = "Dice1";
+let imageDice = document.getElementById("DiceImg")
 
 
 
@@ -19,20 +22,20 @@ function initializeGame() {
     randomResult = 0;
     playerTurn = Math.floor(Math.random() * 2) + 1;
     console.log(playerTurn);
-    p1Name = prompt("Nom du joueur 1 :");
+    p1Name = prompt("Nom du joueur 1 :", "Player 1");
     document.getElementById("P1Name").innerHTML = p1Name;
-    p2Name = prompt("Nom du joueur 2 :");
+    p2Name = prompt("Nom du joueur 2 :", "Player 2");
     document.getElementById("P2Name").innerHTML = p2Name;
     document.getElementById("P1Score").innerHTML = score1;
     document.getElementById("P2Score").innerHTML = score2;
-    document.getElementById("P1Current").innerHTML = actualScore1;
-    document.getElementById("P2Current").innerHTML = actualScore2;
+    document.getElementById("P1CScore").innerHTML = actualScore1;
+    document.getElementById("P2CScore").innerHTML = actualScore2;
     gameStatus = "InGame";
     if (playerTurn === 1 && gameStatus == "InGame") {
-        document.getElementById("Winner").innerHTML = "Au tour de " + p1Name;
+        document.getElementById("Win").innerHTML = "Turn : " + p1Name;
     }
     else if (playerTurn === 2 && gameStatus == "InGame") {
-        document.getElementById("Winner").innerHTML = "Au tour de " + p2Name;
+        document.getElementById("Win").innerHTML = "Turn : " + p2Name;
     }
     
     
@@ -42,6 +45,13 @@ function LaunchDice() {
  
     if (gameStatus === "InGame") {
     randomResult = Math.floor(Math.random() * 6) + 1;
+    for (let i = 1; i <= imgDice.length; i++) {
+        rollImg = imgDice[randomResult - 1]+".png";
+        console.log(rollImg);
+        imageDice.src = "Images/Dice/"+rollImg;
+        imageDice.alt = "Le resultat est un " + randomResult;
+        
+    }
     return randomResult; 
     }
 }
@@ -52,7 +62,7 @@ function Hold() {
             score1 = score1 + actualScore1;
             document.getElementById("P1Score").innerHTML = score1;
             actualScore1 = 0;
-            document.getElementById("P1Current").innerHTML = actualScore1;
+            document.getElementById("P1CScore").innerHTML = actualScore1;
             playerTurn = 2;
             
         }
@@ -60,7 +70,7 @@ function Hold() {
             score2 = score2 + actualScore2;
             document.getElementById("P2Score").innerHTML = score2;
             actualScore2 = 0;
-            document.getElementById("P2Current").innerHTML = actualScore2;
+            document.getElementById("P2CScore").innerHTML = actualScore2;
             playerTurn = 1;
             
         }
@@ -83,9 +93,9 @@ roll.addEventListener('click',() => {
         if (randomResult === 1 ) {
             playerTurn = 2;
             actualScore1 = 0;
-            document.getElementById("Winner").innerHTML = "Au tour de " + p2Name;
+            document.getElementById("Win").innerHTML = "Turn : " + p2Name;
         }
-    document.getElementById("P1Current").innerHTML = actualScore1;
+        document.getElementById("P1CScore").innerHTML = actualScore1;
     randomResult = 0;
     }
     else  {
@@ -95,9 +105,9 @@ roll.addEventListener('click',() => {
         if (randomResult === 1) {
             playerTurn = 1;
             actualScore2 = 0;
-            document.getElementById("Winner").innerHTML = "Au tour de " + p1Name;
+            document.getElementById("Win").innerHTML = "Turn : " + p1Name;
         }
-        document.getElementById("P2Current").innerHTML = actualScore2;
+        document.getElementById("P2CScore").innerHTML = actualScore2;
         randomResult = 0;
 
         }
@@ -107,18 +117,18 @@ const hold = document.getElementById("Hold");
 hold.addEventListener('click', () => {
     Hold();
     if (score1 >= 100) {
-        document.getElementById("Winner").innerHTML = p1Name + " a gagné !" 
+        document.getElementById("Win").innerHTML = p1Name + " won !" 
         gameStatus = "Over"
     }
     else if (score2 >= 100) {
-        document.getElementById("Winner").innerHTML = p2Name + " a gagné !" 
+        document.getElementById("Win").innerHTML = p2Name + " won !" 
         gameStatus = "Over"
     }
     if (playerTurn === 1 && gameStatus == "InGame") {
-        document.getElementById("Winner").innerHTML = "Au tour de " + p1Name;
+        document.getElementById("Win").innerHTML = "Au tour de " + p1Name;
     }
     else if (playerTurn === 2 && gameStatus == "InGame") {
-        document.getElementById("Winner").innerHTML = "Au tour de " + p2Name;
+        document.getElementById("Win").innerHTML = "Au tour de " + p2Name;
     }
 })
 
